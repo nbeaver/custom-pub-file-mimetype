@@ -1,7 +1,6 @@
 MIMETYPE_KEY:=application/pgp-keys
 MIMETYPE_MS :=application/vnd.ms-publisher
 MIMEINFO:=pgp-keys.xml
-DESKTOP:=org.kde.kate.desktop
 PUB_KEY:=intel-product-security-incident-response-team-current.pub
 PUB_MS:=testPUBLISHER.pub
 
@@ -43,5 +42,4 @@ check-handler:
 .PHONY: install
 install :
 	xdg-mime install --mode user $(MIMEINFO)
-	xdg-mime default $(DESKTOP) $(MIMETYPE_KEY)
 	update-mime-database ~/.local/share/mime
