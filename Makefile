@@ -43,3 +43,8 @@ check-handler:
 install :
 	xdg-mime install --mode user $(MIMEINFO)
 	update-mime-database ~/.local/share/mime
+
+.PHONY: install-system-wide
+install-system-wide :
+	xdg-mime install --mode system $(MIMEINFO)
+	update-mime-database /usr/share/mime
